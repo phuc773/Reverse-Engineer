@@ -34,7 +34,7 @@ A collection of binaries, crackme exercises, automation scripts, and practical n
   * `checksec` (Checking NX, PIE, Stack Canary,RELRO)
 
 # NOTES
-> **FILE CRACKMES IN THIS REPO ARE FREE 100%,SO DON'T WORRY ABOUT LISENCE OR SOMETHING LIKE THAT,USE AT YOUR RISK!
+> **FILE CRACKMES IN THIS REPO ARE FREE 100%,SO DON'T WORRY ABOUT LICENSE OR SOMETHING LIKE THAT,USE AT YOUR RISK!
 
 
 
