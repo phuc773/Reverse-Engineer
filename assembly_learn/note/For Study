@@ -1,0 +1,65 @@
+-Into Assembly (x86)
+ + Assembly is not really a language (Translate: Assembly thực chất không phải là một ngôn ngữ)
+ + Almost no abstraction (Translate: Hầu như không có sự trừu tượng hóa)
+ + Basically machine code (Translate: Về cơ bản là mã máy)
+ + More Control Your processor (Translate: Kiểm soát bộ xử lý của bạn tốt hơn)
+ + Need to write more code for basically logic/work (Translate: Cần viết thêm mã cho phần logic/công việc cơ bản.)
+ + Not very portable (for Cpu x86 ,using x86 Assembly. But with ARM cpu ,using ARM assembly) (Translate: Không có tính di động cao (đối với CPU x86 thì sử dụng hợp ngữ x86, nhưng với CPU ARM thì lại sử dụng hợp ngữ ARM)  
+-Understand the Cpu
+ + Assembly has a very close relationship with the CPU (Translate: assembly có mối quan hệ với cpu rất chặt chẽ)
+ + Register:
+   + Working memory (like RAM_) (for save data but not long,like operation, You can save it into register to do operation and save to permanent memory) (Translate: Bộ nhớ làm việc (tương tự như RAM) (dùng để lưu trữ dữ liệu trong thời gian ngắn phục vụ các thao tác xử lý; bạn có thể đưa dữ liệu vào thanh ghi để thực hiện tính toán, sau đó lưu lại vào bộ nhớ lâu dài))
+   + Different purposed (some register use for save data// some register use for operation ...) (Translate: Các thanh ghi có mục đích khác nhau (một số thanh ghi được dùng để lưu trữ dữ liệu, một số khác được dùng cho các thao tác vận hành...))
+   + Fixed width (Machine x32 bit has register x32 bit// Machine x64 bit has x64 bit register) (Translate: Độ rộng cố định (Máy 32-bit có thanh ghi 32-bit // Máy 64-bit có thanh ghi 64-bit))
+   + Machine x64 bit can use register x32 bit.
+ + The Stack:
+   +  LIFO data structure ("Last In, First Out") mean the last element added is a first element to out,the last element added will be in the top of the stack.
+   +  'push' mean put the element place in top of the stack (Translate: 'push' có nghĩa là đưa phần tử vào vị trí trên cùng của ngăn xếp (stack))
+   +  'pop' means to get the last element from the top of stack (Translate: 'pop' có nghĩa là lấy phần tử cuối cùng từ đỉnh của ngăn xếp (stack).)
+   +  Is an Array 
+   +  Stack pointer its like a sign say where the element in the top of stack
+   +  'push' a new element => stack pointer sign move to the new element in top of stack
+   +  'pop' a element in top stack => stack pointer sign move below the element in the top was pop
+   +  Random Access means you can change anything ,not limit at 'push' and 'pop'
+ + Example Register:
+   + mov ebx, 123 (ebx = 123)
+   + mov eax, ebx (eax = ebx)
+   + add ebx, ecx (ebx += ecx) ( a= 8; b = 5; a += b ; a= 13;)
+   + sub ebx, ecx (ebx -= ecx)
+   + mul ebx (ebx *= eax) (mov ebx, eax; mul ebx ; ebx *= eax)
+   + div ebx (ebx /= eax) (mov ebx, eax; div ebx ; ebx /= eax)
+- Instruction Pointer:
+ + EIP (Extended Instruction Pointer) using to save the next executor address
+ + Location of execution means the processor can jump into a new function 
+ + Not like a register (Can't be using push,pop normally)
+ + Change by jump ops
+ + Example Register:
+   ||==============================================||
+   + cmp a, b
+   + je label_ (jump if equal) (a == b)
+   ||==============================================||
+   + cmp a, b
+   + jne label_ (jump if not equal) (a ! b)
+   ||==============================================||
+   + cmp a, b
+   + jg label_ (jump if greater than) (a > b)
+   ||==============================================||
+   + cmp a, b
+   + jge label_ (jump if greater of equal) (a >= b)
+   ||==============================================||
+   + cmp a, b
+   + jl label_ (jump if less than) (a < b)
+   ||==============================================||
+   + cmp a, b
+   + jle label_ (jump if less of equal) ( a <= b)
+   ||==============================================||
+   + cmp a, b mean cmp will do a - b but not store the result, it's only store the status into two flag (it's call EFLAGS) : ZF and SF, ZF only store if a - b = 0 ; SF only store if a - b = negative (mean a < b)
+   + jump will look at EFLAGS result.
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+nasm compile
+detail: nasm -f elf32 example.asm -o example.o
+.o file (object file)
+More Info
+ + about elf32: https://interrupt.memfault.com/blog/elf-format-differences
+ + about nasm -f -o: https://www.nasm.us/doc/nasm02.html
+ + about .o: https://en.wikipedia.org/wiki/Object_file
+ + about nasm: https://en.wikipedia.org/wiki/Netwide_Assembler
+ + about x86-x64: https://en.wikipedia.org/wiki/X86-64
+ + about x32 ABI: https://en.wikipedia.org/wiki/X32_ABI

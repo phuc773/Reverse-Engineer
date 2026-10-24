@@ -1,0 +1,10 @@
+nasm compile
+Detail: ld -m elf_i386 example.o -o example
+ELF file (Executable link file) 
+More Info
+  + about i386: https://en.wikipedia.org/wiki/I386
+  + about ld: https://ftp.gnu.org/old-gnu/Manuals/ld-2.9.1/html_node/ld_3.html
+  + about ELF: https://www.baeldung.com/linux/executable-and-linkable-format-file
+  + about nasm: https://en.wikipedia.org/wiki/Netwide_Assembler
+  + about x86-x64: https://en.wikipedia.org/wiki/X86-64
+  + about x32 ABI: https://en.wikipedia.org/wiki/X32_ABI
